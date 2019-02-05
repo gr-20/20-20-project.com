@@ -6,6 +6,7 @@ body {
   font-family: 'Anton', Helvetica, sans-serif;
   font-size: 16px;
   color: #222;
+  text-align: center;
 }
 
 p {
@@ -21,7 +22,15 @@ p {
   flex-direction: column;
 }
 
+.ProjectOverview {
+  margin: 0;
+  padding: 0;
+  &__item {
+    list-style-type: none;
+  }
+}
+
 .MainHeading {
   font-size: 4rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }

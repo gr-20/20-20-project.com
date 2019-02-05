@@ -17,17 +17,20 @@ const actions = {
 };
 
 const view = (/*state, actions*/) => {
-  return (<div class={c('Container')}>
-    {/* <h1 class={c('MainHeading')}>40km altitude gain/loss</h1>
-    <h1 class={c('MainHeading')}>400km in distance</h1>
-    <h1 class={c('MainHeading')}>15KG pack and camping</h1>
-    <h1 class={c('MainHeading')}>Europe's toughest hike</h1>
-    <h1 class={c('MainHeading')}>The GR-20, in both directions, in 20 days or less</h1>
-    <h1 class={c('MainHeading')}>THIS</h1>
-    <h1 class={c('MainHeading')}>IS</h1> */}
-    <h1 class={c('MainHeading')}>THE 20-20 PROJECT</h1>
-    <p>Coming soon...</p>
-  </div>
+  return (
+    <div class={c('Container')}>
+      <h1 class={c('MainHeading')}>THE 20-20 PROJECT</h1>
+      <p>Coming soon...</p>
+      {/* <ul class={c('ProjectOverview')}>
+        <li class={c('ProjectOverview__item')}>+- 40km altitude gain/loss</li>
+        <li class={c('ProjectOverview__item')}>+- 400km in distance</li>
+        <li class={c('ProjectOverview__item')}>+- 15KG pack (camping)</li>
+        <li class={c('ProjectOverview__item')}>Europe's toughest hike</li>
+        <li class={c('ProjectOverview__item')}>
+          The GR-20, in both directions, in 20 days or less
+        </li>
+      </ul> */}
+    </div>
   );
 };
 
