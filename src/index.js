@@ -18,7 +18,14 @@ const actions = {
 
 const view = (/*state, actions*/) => {
   return (<div class={c('Container')}>
-    <h1>The 20 20 Project</h1>
+    {/* <h1 class={c('MainHeading')}>40km altitude gain/loss</h1>
+    <h1 class={c('MainHeading')}>400km in distance</h1>
+    <h1 class={c('MainHeading')}>15KG pack and camping</h1>
+    <h1 class={c('MainHeading')}>Europe's toughest hike</h1>
+    <h1 class={c('MainHeading')}>The GR-20, in both directions, in 20 days or less</h1>
+    <h1 class={c('MainHeading')}>THIS</h1>
+    <h1 class={c('MainHeading')}>IS</h1> */}
+    <h1 class={c('MainHeading')}>THE 20-20 PROJECT</h1>
     <p>Coming soon...</p>
   </div>
   );
