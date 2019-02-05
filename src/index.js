@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { h, app } from 'hyperapp';
 import classNames from 'classnames/bind';
-import 'purecss/build/base.css';
 
 import STYLES from './index.css';
 
@@ -34,4 +33,4 @@ const view = (/*state, actions*/) => {
   );
 };
 
-app(state, actions, view, document.body);
+app(state, actions, view, document.getElementById('root'));

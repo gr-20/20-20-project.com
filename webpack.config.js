@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
     mode,
     devtool: 'source-map',
     output: {
-      filename: 'main.js',
+      filename: '[name].[contentHash].js',
       path: path.resolve(__dirname, 'build')
     },
     module: {
@@ -34,7 +34,8 @@ module.exports = (env, argv) => {
                 modules: true,
                 localIdentName: '[local]--[hash:base64:5]',
                 sourceMap: true,
-                camelCase: true
+                camelCase: true,
+                importLoaders: 1
               }
             },
             'postcss-loader'
@@ -58,8 +59,8 @@ module.exports = (env, argv) => {
         }
       }),
       new MiniCssExtractPlugin({
-        filename: devMode ? '[name].css' : '[name].[hash].css',
-        chunkFilename: devMode ? '[id].css' : '[id].[hash].css'
+        filename: '[name].[contentHash].css',
+        chunkFilename: '[id].[contentHash].css'
       })
     ]
   };
