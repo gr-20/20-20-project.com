@@ -1,0 +1,20 @@
+{
+  "name": "20-20-project.com",
+  "version": "1.0.0",
+  "description": "Website for 20-20-project.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && mkdir build && cp index.html build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gr-20/20-20-project.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gr-20/20-20-project.com/issues"
+  },
+  "homepage": "https://github.com/gr-20/20-20-project.com#readme"
+}
