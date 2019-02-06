@@ -1,23 +1,21 @@
 @import 'purecss/build/base.css';
 @import url(https://fonts.googleapis.com/css?family=Anton);
 
-html,
-body {
-  height: 100%;
-  font-family: 'Anton', Helvetica, sans-serif;
-  font-size: 16px;
-  color: #222;
-  text-align: center;
-}
-
 :global {
+  html,
+  body {
+    height: 100%;
+    font-family: 'Anton', Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+  }
+  p {
+    font-size: 1.2rem;
+  }
   #root {
     height: 100%;
   }
-}
-
-p {
-  font-size: 1.2rem;
 }
 
 .Container {
@@ -34,6 +32,13 @@ p {
   padding: 0;
   &__item {
     list-style-type: none;
+    display: none;
+    font-size: 3rem;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+    text-shadow: 1px 1px 1px rgba(0, 0, 0);
+    &--visible {
+      display: block;
+    }
   }
 }
 
