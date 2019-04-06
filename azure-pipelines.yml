@@ -20,3 +20,11 @@ steps:
     npm run lint
     npm run build
   displayName: 'build'
+
+- script: |
+    git config remote.origin.url https://badsyntax:"$token"@github.com/gr-20/20-20-project.com.git
+    git commit -m "Publishing GitHub Pages [skip ci]"
+    npm run deploy
+  env:
+    token: $(github_token)
+  displayName: 'Deploy to GitHub pages'
