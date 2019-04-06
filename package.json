@@ -12,6 +12,9 @@
     "lint:js": "eslint src/**/*.js",
     "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\""
   },
+  "engines": {
+    "node": ">=10.15"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gr-20/20-20-project.com.git"
