@@ -11,6 +11,7 @@
     "lint:css": "stylelint src/**/*.css",
     "lint:js": "eslint src/**/*.js",
     "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
+    "predeploy": "cp src/CNAME build/",
     "deploy": "gh-pages -d build"
   },
   "engines": {
