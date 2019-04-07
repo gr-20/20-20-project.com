@@ -19,7 +19,7 @@ steps:
     npm install
     npm run lint
     npm run build
-  displayName: 'build'
+  displayName: 'Build project'
 
 - script: |
     git config --global user.email "willis.rh@gmail.com"
