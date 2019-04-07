@@ -25,7 +25,6 @@ steps:
     git config --global user.email "willis.rh@gmail.com"
     git config --global user.name "Richard Willis"
     git config remote.origin.url https://badsyntax:"$token"@github.com/gr-20/20-20-project.com.git
-    git commit -m "Publishing GitHub Pages [skip ci]"
     npm run deploy
   env:
     token: $(github_token)

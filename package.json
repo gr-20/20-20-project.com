@@ -12,7 +12,7 @@
     "lint:js": "eslint src/**/*.js",
     "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
     "predeploy": "cp src/CNAME build/",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -m \"Publishing GitHub Pages [skip ci]\""
   },
   "engines": {
     "node": ">=10.15"
