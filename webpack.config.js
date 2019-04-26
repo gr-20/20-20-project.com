@@ -11,6 +11,9 @@ module.exports = (env, argv) => {
     entry: './src/index.js',
     mode,
     devtool: 'source-map',
+    devServer: {
+      historyApiFallback: true
+    },
     output: {
       filename: '[name].[contentHash].js',
       path: path.resolve(__dirname, 'build')
