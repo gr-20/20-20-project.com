@@ -39,7 +39,7 @@ const actions = {
 
 const Home = () => {
   return (
-    <div class={c('Container', 'Container--home')}>
+    <div class={c('Home')}>
       <ul class={c('ProjectOverview')}>
         {state.points.map(point => (
           <li class={c('ProjectOverview__item')}>{point}</li>
@@ -51,7 +51,7 @@ const Home = () => {
 
 const Kit = () => {
   return (
-    <div class={c('Container', 'Container--kit')}>
+    <div class={c('Kit')}>
       <script src="https://lighterpack.com/e/1y6ig" />
       <div id="1y6ig" />
     </div>
@@ -60,7 +60,7 @@ const Kit = () => {
 
 const view = (state, actions) => {
   return (
-    <div>
+    <div class={c('Container')}>
       <Route path="/" render={Home} />
       <Route path="/kit" render={Kit} />
     </div>
