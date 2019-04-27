@@ -58,12 +58,7 @@ const Kit = () => {
 };
 
 const view = (state, actions) => {
-  return (
-    <div class={c('Container')}>
-      <Route path="/" render={Home} />
-      <Route path="/kit" render={Kit} />
-    </div>
-  );
+  return <Home />;
 };
 
 app(state, actions, view, document.getElementById('root'));
