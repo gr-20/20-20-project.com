@@ -64,7 +64,6 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "@hyperapp/router": "^0.7.1",
     "classnames": "^2.2.6",
     "hyperapp": "^1.2.9",
     "purecss": "^1.0.0"

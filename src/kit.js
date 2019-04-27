@@ -1,5 +1,4 @@
 import { h, app } from 'hyperapp';
-import { Link, Route, Switch, Redirect, location } from '@hyperapp/router';
 import classNames from 'classnames/bind';
 
 import STYLES from './kit.css';
