@@ -8,7 +8,10 @@ module.exports = (env, argv) => {
   const mode = argv.mode || process.env.NODE_ENV || 'development';
   const devMode = mode !== 'production';
   return {
-    entry: './src/index.js',
+    entry: {
+      index: './src/index.js',
+      kit: './src/kit.js'
+    },
     mode,
     devtool: 'source-map',
     devServer: {
@@ -61,6 +64,20 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({
         template: 'src/index.html',
+        chunks: ['index'],
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: false
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/kit.html',
+        filename: 'kit.html',
+        chunks: ['kit'],
         minify: {
           collapseWhitespace: true,
           removeComments: true,
