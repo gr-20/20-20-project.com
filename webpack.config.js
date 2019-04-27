@@ -4,6 +4,15 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const minifyConfig = {
+  collapseWhitespace: true,
+  removeComments: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  useShortDoctype: false
+};
+
 module.exports = (env, argv) => {
   const mode = argv.mode || process.env.NODE_ENV || 'development';
   const devMode = mode !== 'production';
@@ -65,27 +74,19 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: 'src/index.html',
         chunks: ['index'],
-        minify: {
-          collapseWhitespace: true,
-          removeComments: true,
-          removeRedundantAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: false
-        }
+        minify: minifyConfig
       }),
       new HtmlWebpackPlugin({
         template: 'src/kit.html',
         filename: 'kit.html',
         chunks: ['kit'],
-        minify: {
-          collapseWhitespace: true,
-          removeComments: true,
-          removeRedundantAttributes: true,
-          removeScriptTypeAttributes: true,
-          removeStyleLinkTypeAttributes: true,
-          useShortDoctype: false
-        }
+        minify: minifyConfig
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/404.html',
+        filename: '404.html',
+        inject: false,
+        minify: minifyConfig
       }),
       new MiniCssExtractPlugin({
         filename: '[name].[contentHash].css',
